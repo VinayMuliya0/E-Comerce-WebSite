@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+<script src="assets/js/jquery-3.3.1.js"></script>
+  </head>
+  <body>
+    <span id="del_1">15</span>
+    <span id="del_2">25</span>
+    <h4 id="total"></h4>
+    <script>
+      (function ($) {
+        "use strict";
+    	$(window).on("load", function () {
+          var val_1 = $("#del_1").text();
+		  var in_val_1 = parseInt(val_1);
+          var val_2 = $("#del_2").text();
+		  var in_val_2 = parseInt(val_2);
+		  var val_3 = in_val_1 + in_val_2;
+		  $("#total").html(val_3);
+        });
+      })(jQuery);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,1130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="assets/image/ring_1.png" type="image/png" />
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/all.css" />
+    <link rel="stylesheet" href="assets/css/slick.css" />
+    <link rel="stylesheet" href="assets/css/slick-theme.css" />
+    <link rel="stylesheet" href="assets/css/animate.min.css" />
+    <link rel="stylesheet" href="assets/css/jquery.toolbar.css" />
+    <link rel="stylesheet" href="assets/css/jquery-ui.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/responcive.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@400;500&family=Cabin+Condensed:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Hind:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <title>Products | E-Commerce</title>
+</head>
+
+<body>
+    <div class="main_wrapper">
+
+        <!-- hiddent content -->
+        <div class="overly"></div>
+        <div id="search_bar" class="search_bar">
+            <form class="input-group">
+                <input type="search" placeholder="Search...." id="search">
+                <button class="btn" type="submit" for="search">Submit</button>
+            </form>
+            <span class="close_btn">
+                <a id="close_btn"><i class="far fa-times-circle"></i></a>
+            </span>
+        </div>
+
+        <!-- side cart -->
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+            <div class="offcanvas-header">
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <div class="cart_header bm_b pb-2">
+                    <h6 class="text_black">SHOPPING CART :</h6>
+                </div>
+                <div class="add_cart bm_b">
+                    <div class="cart">
+                        <img src="assets/image/gold_ring_1.png" class="img-fluid" alt="">
+                        <div class="cart_details_text">
+                            <h5 class="text_black">Golden Ring with 5crt Diamond</h5>
+                            <p><span class="cart_amount">1</span> &times; <span class="cart_price_symbol">&dollar;</span><span class="cart_price">1622.00</span></p>
+                        </div>
+                        <div class="trash">
+                            <i class="fas fa-trash-alt"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="total_price bm_b">
+                    <h5>Total: <span id="total_price" class="float-right"><span class="cerncy_symbole">&dollar;</span>1622.00</span></h5>
+                </div>
+                <div class="cart_button">
+                    <a href="cart.html"><button class="btn">View Cart</button></a>
+                    <a href="shipping_procces.html"><button class="btn">Checkout</button></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- top part -->
+        <header class="header">
+            <div class="container-xxl">
+                <div class="header_row">
+                    <div class="row align-items-center">
+                        <div class="col-6">
+                            <div class="shipping_text">
+                                <p>Free Shipping for orders over <span class="text-white">$100</span></p>
+                            </div>
+                        </div>
+                        <div class="col-6 text-right">
+                            <div class="conveter">
+                                <select name="currency" id="currency">
+                                    <option selected value="USD">USD</option>
+                                    <option value="UK">EUR</option>
+                                    <option value="GBP">GBP</option>
+                                    <option value="AUD">AUD</option>
+                                    <option value="INR">INR</option>
+                                    <option value="BDT">BDT</option>
+                                    <option disabled value="JPY">JPY</option>
+                                    <option value="CAD">CAD</option>
+                                </select>
+                                <select name="language-select" id="language">
+                                    <option selected value="English">English</option>
+                                    <option value="Russian">Russian</option>
+                                    <option value="Gujarati">Gujarati</option>
+                                    <option value="Hindi">Hindi</option>
+                                    <option value="Italian">Italian</option>
+                                    <option value="German">German</option>
+                                    <option value="Spanish">Spanish</option>
+                                    <option value="French">French</option>
+                                    <option disabled value="Arabic">Arabic</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- navbar -->
+        <nav class="navbar navbar-expand-lg ">
+            <div class="container-fluid">
+                <a class="navbar-brand order-lg-1 order-sm-2 order-1" href="index.html"><img src="assets/image/logo.png" class="img-fluid" alt=""></a>
+                <button class="navbar-toggler order-lg-4 order-sm-1 order-2 border-1 border-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fas fa-bars text-white" ></i>
+                </button>
+                <div class="collapse navbar-collapse order-lg-2 order-4" id="navbarSupportedContent">
+                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">Shop</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Product<span class="ps-2"><i class="fas fa-angle-down"></i></span></a>
+                            <ul class="dropdown-menu w-100 ">
+                                <div class="row overflow-auto">
+                                    <div class="col-lg-3 col-md-6 col-12">
+                                        <div class="diamond_section">
+                                            <ul class="diamond section_list list-unstyled">
+                                                <li class="section_list_items">
+                                                    <h5 class="text-uppercase">diamond</h5>
+                                                </li>
+                                                <li class="section_list_items">
+                                                    <a href="javascript:void(0);">Locket</a>
+                                                </li>
+                                                <li class="section_list_items">
+                                                    <a href="javascript:void(0);">Earrings</a>
+                                                </li>
+                                                <li class="section_list_items">
+                                                    <a href="javascript:void(0);">bracelets</a>
+                                                </li>
+                                                <li class="section_list_items">
+                                                    <a href="javascript:void(0);">Necklace</a>
+                                                </li>
+                                                <li class="section_list_items">
+                                                    <a href="javascript:void(0);">Hand Ring</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-6 col-12">
+                                        <div class="bronze_section">
+                                            <ul class="diamond section_list list-unstyled">
+                                                <li class="section_list_items">
+                                                    <h5 class="text-uppercase">bronze</h5>
+                                                </li>
+                                                <li class="section_list_items">
+                                                    <a href="javascript:void(0);">Locket</a>
+                                                </li>
+                                                <li class="section_list_items">
+                                                    <a href="javascript:void(0);">Earrings</a>
+                                                </li>
+                                                <li class="section_list_items">
+                                                    <a href="javascript:void(0);">bracelets</a>
+                                                </li>
+                                                <li class="section_list_items">
+                                                    <a href="javascript:void(0);">Necklace</a>
+                                                </li>
+                                                <li class="section_list_items">
+                                                    <a href="javascript:void(0);">Hand Ring</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-6 col-12">
+                                        <div class="gold_section">
+                                            <ul class="diamond section_list list-unstyled">
+                                                <li class="section_list_items">
+                                                    <h5 class="text-uppercase">gold</h5>
+                                                </li>
+                                                <li class="section_list_items">
+                                                    <a href="javascript:void(0);">Locket</a>
+                                                </li>
+                                                <li class="section_list_items">
+                                                    <a href="javascript:void(0);">Earrings</a>
+                                                </li>
+                                                <li class="section_list_items">
+                                                    <a href="javascript:void(0);">bracelets</a>
+                                                </li>
+                                                <li class="section_list_items">
+                                                    <a href="javascript:void(0);">Necklace</a>
+                                                </li>
+                                                <li class="section_list_items">
+                                                    <a href="javascript:void(0);">Hand Ring</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-6 col-12">
+                                        <div class="silver_section">
+                                            <ul class="diamond section_list list-unstyled">
+                                                <li class="section_list_items">
+                                                    <h5 class="text-uppercase">silver</h5>
+                                                </li>
+                                                <li class="section_list_items">
+                                                    <a href="javascript:void(0);">Locket</a>
+                                                </li>
+                                                <li class="section_list_items">
+                                                    <a href="javascript:void(0);">Earrings</a>
+                                                </li>
+                                                <li class="section_list_items">
+                                                    <a href="javascript:void(0);">bracelets</a>
+                                                </li>
+                                                <li class="section_list_items">
+                                                    <a href="javascript:void(0);">Necklace</a>
+                                                </li>
+                                                <li class="section_list_items">
+                                                    <a href="javascript:void(0);">Hand Ring</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6">
+                                        <div class="nav_image mt-4">
+                                            <img src="assets/image/bottom_menu_image_2.jpg" class="img-fluid" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6">
+                                        <div class="nav_image mt-4">
+                                            <img src="assets/image/bottom_menu_image_1.jpg" class="img-fluid" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="blog.html">Blog</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Pages<span class="ps-2"><i class="fas fa-angle-down"></i></span></a>
+                            <ul class="dropdown-menu w-100">
+                                <li class="pb-lg-2 pb-sm-3 pb-2"><a class="nav-item" href="about_us.html">About Us</a></li>
+                                <li class="pb-lg-2 pb-sm-3 pb-2"><a class="nav-item" href="#">Product Video</a></li>
+                                <li><hr class="dropdown-divider bg-warning"></li>
+                                <li class="pb-lg-2 pb-sm-3 pb-2"><a class="nav-item" href="contect_us.html">Content Us</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="py-3 order-lg-4 order-sm-3 order-3">
+                    <a class="nav_icon" id="search_icon"><i class="fas fa-search"></i></a>
+                    <a class="nav_icon" href="login.html"><i class="fas fa-user"></i></a>
+                    <a class="nav_icon" href="wishlist.html"><i class="far fa-heart"></i></a>
+                    <a class="nav_icon" ><i class="fas fa-cart-arrow-down" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"></i><span class="cart_count">1</span></a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Wishlist banner -->
+        <section class="about_banner jarallax">
+            <div class="container-fluid">
+                <div class="about_row">
+                    <div class="row">
+                        <div class="col-12 py-4">
+                            <h1 class="text-white text-center">Products</h1>
+                            <div class="about_link_wrapper text-center mt-3">
+                                <a href="index.html" class="fw-bold">Home</a>
+                                <span class="text-white">/</span>
+                                <span class="text-white fw-bold">Products</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Products -->
+        <section class="products_section">
+            <div class="container-xxl">
+                <div class="product_row">
+                    <div class="row">
+                        <div class="col-md-3 order-md-1 order-2 border-end border-2 primer_border">
+                            <div class="product_sidebar_wrapper ">
+                                <div class="prodcuts_sidebar_selection">
+                                    <h3 class="text_black">Categories</h3>
+                                    <ul class="accordion">
+                                        <li class="position-relative">
+                                            <div class="text_black d-flex">
+                                                <a href="javascript:void(0);">Diamond Jewelry</a>
+                                            </div>
+                                            <a class="pluse_icon toggle fas fa-plus" href="javascrip:void(0);"></a>
+                                            <ul class="inner">
+                                                <li>
+                                                    <a href="javascript:void(0);">Dangle Earring</a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:void(0);">Wedding Ring</a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:void(0);">Dangle Earring</a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:void(0);">Wedding Ring</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="position-relative">
+                                            <div class="text_black d-flex">
+                                                <a href="javascript:void(0);">Bronze Jewelry</a>
+                                            </div>
+                                            <a class="pluse_icon toggle fas fa-plus" href="javascrip:void(0);"></a>
+                                            <ul class="inner">
+                                                <li>
+                                                    <a href="javascript:void(0);">Dangle Earring</a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:void(0);">Wedding Ring</a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:void(0);">Dangle Earring</a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:void(0);">Wedding Ring</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="position-relative">
+                                            <div class="text_black d-flex">
+                                                <a href="javascript:void(0);">Gold Jewelry</a>
+                                            </div>
+                                            <a class="pluse_icon toggle fas fa-plus" href="javascrip:void(0);"></a>
+                                            <ul class="inner">
+                                                <li class="position-relative">
+                                                    <div class="text_black d-flex">
+                                                        <a href="javascript:void(0);">Earring</a>
+                                                    </div>
+                                                    <a class="pluse_icon toggle fas fa-plus" href="javascrip:void(0);"></a>
+                                                    <ul class="inner">
+                                                        <li>
+                                                            <a href="javascript:void(0);">Dangle Earring</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="javascript:void(0);">Lever Earrings</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="javascript:void(0);">Latch Earrings</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="javascript:void(0);">French Back Earrings</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="javascript:void(0);">Fish Hook Earrings</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="javascript:void(0);">Ear Wire Earrings</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="position-relative">
+                                                    <div class="text_black d-flex">
+                                                        <a href="javascript:void(0);">Necklace</a>
+                                                    </div>
+                                                    <a class="pluse_icon toggle fas fa-plus" href="javascrip:void(0);"></a>
+                                                    <ul class="inner">
+                                                        <li>
+                                                            <a href="javascript:void(0);">Pendant Necklace</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="javascript:void(0);">Choker</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="javascript:void(0);">Collar Necklace</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="javascript:void(0);">Charms</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="javascript:void(0);">Matinee</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="javascript:void(0);">Lariat</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="position-relative">
+                                            <div class="text_black d-flex">
+                                                <a href="javascript:void(0);">Silver Jewelry</a>
+                                            </div>
+                                            <a class="pluse_icon toggle fas fa-plus" href="javascrip:void(0);"></a>
+                                            <ul class="inner">
+                                                <li class="position-relative">
+                                                    <div class="text_black d-flex">
+                                                        <a href="javascript:void(0);">Necklace</a>
+                                                    </div>
+                                                    <a class="pluse_icon toggle fas fa-plus" href="javascrip:void(0);"></a>
+                                                    <ul class="inner">
+                                                        <li class="position-relative">
+                                                            <div class="text_black d-flex">
+                                                                <a href="javascript:void(0);">Wanda</a>
+                                                            </div>
+                                                            <a class="pluse_icon toggle fas fa-plus" href="javascrip:void(0);"></a>
+                                                            <div class="inner">
+                                                                <a href="javascript:void(0);">Orient</a>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li>Dangle Earring</li>
+                                                <li>Dangle Earring</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="shor_by_size">
+                                    <h3 class="text_black">Select Your Size</h3>
+                                    <ul class="sizes d-flex flex-wrap list-unstyled justify-content-lg-around">
+                                        <li class="mb-2">
+                                            <a href="javascript:void(0);">
+                                                <input type="checkbox" name="" id="selectSize1" value="l">
+                                                <label for="selectSize1">L</label>
+                                            </a>
+                                        </li>
+                                        <li class="mb-2">
+                                            <a href="javascript:void(0);">
+                                                <input type="checkbox" name="" id="selectSize2" value="m">
+                                                <label for="selectSize2">M</label>
+                                            </a>
+                                        </li>
+                                        <li class="mb-2">
+                                            <a href="javascript:void(0);">
+                                                <input type="checkbox" name="" id="selectSize3" value="s">
+                                                <label for="selectSize3">S</label>
+                                            </a>
+                                        </li>
+                                        <li class="mb-2">
+                                            <a href="javascript:void(0);">
+                                                <input type="checkbox" name="" id="selectSize4" value="xl">
+                                                <label for="selectSize4">XL</label>
+                                            </a>
+                                        </li>
+                                        <li class="mb-2">
+                                            <a href="javascript:void(0);">
+                                                <input type="checkbox" name="" id="selectSize5" value="xxl">
+                                                <label for="selectSize5">XXL</label>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="price_range">
+                                    <h3 class="text_black">Set Your Range</h3>
+                                    <div class="container-fluid px-0">
+                                        <div class="row slider-labels mb-3 g-0">
+                                            <div class="col-6 caption">
+                                                <strong>Min:</strong> <span id="slider-range-value1"></span>
+                                            </div>
+                                            <div class="col-6 text-end caption">
+                                                <strong>Max:</strong> <span id="slider-range-value2"></span>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <div id="slider-range"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="types">
+                                    <h3 class="text_black">Set You Price</h3>
+                                    <ul class="select_prices list-unstyled">
+                                        <li>
+                                            <input type="checkbox" id="price1">
+                                            <label for="price1">$100 - $200</label>
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" id="price2">
+                                            <label for="price2">$200 - $300</label>
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" id="price3">
+                                            <label for="price3">$300 - $400</label>
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" id="price4">
+                                            <label for="price4">$400 - $500</label>
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" id="price5">
+                                            <label for="price5">$500 - $600</label>
+                                        </li>
+                                    </ul>
+                                    <h3 class="text_black">Select Your Brand</h3>
+                                    <ul class="select_prices list-unstyled">
+                                        <li>
+                                            <input type="checkbox" id="brand1">
+                                            <label for="brand1">Altra</label>
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" id="brand2">
+                                            <label for="brand2">Bloom</label>
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" id="brand3">
+                                            <label for="brand3">Karatcart</label>
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" id="brand4">
+                                            <label for="brand4">Altra</label>
+                                        </li>
+                                    </ul>
+                                    <h3 class="text_black">Select Your Type</h3>
+                                    <ul class="select_prices list-unstyled">
+                                        <li>
+                                            <input type="checkbox" id="type1">
+                                            <label for="type1">Earring</label>
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" id="type2">
+                                            <label for="type2">Chain</label>
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" id="type3">
+                                            <label for="type3">Pendant</label>
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" id="type4">
+                                            <label for="type4">Ring</label>
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" id="type5">
+                                            <label for="type5">Bracelet</label>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-9 order-md-2 order-1">
+                            <div class="grid_section">
+                                <div class="container-fluid px-0">
+                                    <div class="row my-3 align-items-center">
+                                        <div class="col-sm-4 col-12">
+                                            <div class="grid_btns">
+                                                <button class="btn btn-danger btn-list">List View</button>
+                                                <button class="btn btn-danger btn-grid">Grid View</button>
+                                            </div>
+                                        </div> 
+                                        <div class="col-sm-8 col-12">   
+                                            <div class="short_show_section">
+                                                <form action="" class="show_items d-flex justify-content-sm-end justify-content-center">
+                                                    <div class="mb-sm-0 mb-2 pe-3">
+                                                        <label for="showProduct" class="pe-2">Show: </label>
+                                                        <select name="" id="showProduct">
+                                                            <option value="8" selected>8</option>
+                                                            <option value="12">12</option>
+                                                            <option value="15">15</option>
+                                                            <option value="18">18</option>
+                                                            <option value="21">21</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="mb-sm-0 mb-2">
+                                                        <label for="showProduct" class="pe-2">Short By: </label>
+                                                        <select name="" id="showProduct">
+                                                            <option value="Featured" selected>Featured</option>
+                                                            <option value="Price, low to high">Price, low to high</option>
+                                                            <option value="Price, high to low">Price, high to low</option>
+                                                            <option value="A-Z">A-Z</option>
+                                                            <option value="Date, old to new">Date, old to new</option>
+                                                            <option value="Date, new to old">Date, new to old</option>
+                                                            <option value="Best Selling">Best Selling</option>
+                                                        </select>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row grid-container g-md-3 g-3">
+                                        <div class="col-6 col-sm-4 col-md-4">
+                                            <div class="card">
+                                                <div class="fi_sl_img_wrapper">
+                                                    <img class="card-img-top img-fluid" src="assets/image/fi_sl_1.jpg" alt="Card image cap">
+                                                    <div class="hover_show">
+                                                        <span class="procuct_icon" tooltip="Queck view" flow="right"><i class="fas fa-compress-alt" type="button" data-bs-toggle="modal" data-bs-target="#exampleModalLg"></i></span>
+                                                        <span class="procuct_icon" tooltip="White List" flow="right"><a href="wishlist.html" class="text-white"><i class="far fa-heart"></i></a></span>
+                                                        <span class="procuct_icon" tooltip="Compare" flow="right"><i class="fas fa-sync-alt" type="button" data-bs-toggle="modal" data-bs-target="#exampleModalXl"></i></span>
+                                                    </div>
+                                                    <div class="black_overlay"></div>
+                                                </div>
+                                                <div class="card-body">
+                                                    <h5 class="product_name text_black py-2"><a href="product_details.html  "><span class="product_number fw-bold">1.</span>Dummy Product Name</a></h5>
+                                                    <h6 class="product_price"><span class="text-muted"><s>&dollar;1200.00</s> &nbsp;</span>&dollar;800.00</h6>
+                                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi deleniti repellat minus?</p>
+                                                    <div class="star_wrapper mt-1 mb-2">
+                                                        <span class="full"><i class="fas fa-star"></i></span>
+                                                        <span class="full"><i class="fas fa-star"></i></span>
+                                                        <span class="full"><i class="fas fa-star"></i></span>
+                                                        <span class="full"><i class="fas fa-star"></i></span>
+                                                        <span class="blank"><i class="far fa-star"></i></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm-4 col-md-4">
+                                            <div class="card">
+                                                <div class="fi_sl_img_wrapper">
+                                                    <img class="card-img-top img-fluid" src="assets/image/fi_sl_1.jpg" alt="Card image cap">
+                                                    <div class="hover_show">
+                                                        <span class="procuct_icon" tooltip="Queck view" flow="right"><i class="fas fa-compress-alt" type="button" data-bs-toggle="modal" data-bs-target="#exampleModalLg"></i></span>
+                                                        <span class="procuct_icon" tooltip="White List" flow="right"><a href="wishlist.html" class="text-white"><i class="far fa-heart"></i></a></span>
+                                                        <span class="procuct_icon" tooltip="Compare" flow="right"><i class="fas fa-sync-alt" type="button" data-bs-toggle="modal" data-bs-target="#exampleModalXl"></i></span>
+                                                    </div>
+                                                    <div class="black_overlay"></div>
+                                                </div>
+                                                <div class="card-body">
+                                                    <h5 class="product_name text_black py-2"><a href="product_details.html  "><span class="product_number fw-bold">1.</span>Dummy Product Name</a></h5>
+                                                    <h6 class="product_price"><span class="text-muted"><s>&dollar;1200.00</s> &nbsp;</span>&dollar;800.00</h6>
+                                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi deleniti repellat minus?</p>
+                                                    <div class="star_wrapper mt-1 mb-2">
+                                                        <span class="full"><i class="fas fa-star"></i></span>
+                                                        <span class="full"><i class="fas fa-star"></i></span>
+                                                        <span class="full"><i class="fas fa-star"></i></span>
+                                                        <span class="full"><i class="fas fa-star"></i></span>
+                                                        <span class="blank"><i class="far fa-star"></i></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm-4 col-md-4">
+                                            <div class="card">
+                                                <div class="fi_sl_img_wrapper">
+                                                    <img class="card-img-top img-fluid" src="assets/image/fi_sl_1.jpg" alt="Card image cap">
+                                                    <div class="hover_show">
+                                                        <span class="procuct_icon" tooltip="Queck view" flow="right"><i class="fas fa-compress-alt" type="button" data-bs-toggle="modal" data-bs-target="#exampleModalLg"></i></span>
+                                                        <span class="procuct_icon" tooltip="White List" flow="right"><a href="wishlist.html" class="text-white"><i class="far fa-heart"></i></a></span>
+                                                        <span class="procuct_icon" tooltip="Compare" flow="right"><i class="fas fa-sync-alt" type="button" data-bs-toggle="modal" data-bs-target="#exampleModalXl"></i></span>
+                                                    </div>
+                                                    <div class="black_overlay"></div>
+                                                </div>
+                                                <div class="card-body">
+                                                    <h5 class="product_name text_black py-2"><a href="product_details.html  "><span class="product_number fw-bold">1.</span>Dummy Product Name</a></h5>
+                                                    <h6 class="product_price"><span class="text-muted"><s>&dollar;1200.00</s> &nbsp;</span>&dollar;800.00</h6>
+                                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi deleniti repellat minus?</p>
+                                                    <div class="star_wrapper mt-1 mb-2">
+                                                        <span class="full"><i class="fas fa-star"></i></span>
+                                                        <span class="full"><i class="fas fa-star"></i></span>
+                                                        <span class="full"><i class="fas fa-star"></i></span>
+                                                        <span class="full"><i class="fas fa-star"></i></span>
+                                                        <span class="blank"><i class="far fa-star"></i></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm-4 col-md-4">
+                                            <div class="card">
+                                                <div class="fi_sl_img_wrapper">
+                                                    <img class="card-img-top img-fluid" src="assets/image/fi_sl_1.jpg" alt="Card image cap">
+                                                    <div class="hover_show">
+                                                        <span class="procuct_icon" tooltip="Queck view" flow="right"><i class="fas fa-compress-alt" type="button" data-bs-toggle="modal" data-bs-target="#exampleModalLg"></i></span>
+                                                        <span class="procuct_icon" tooltip="White List" flow="right"><a href="wishlist.html" class="text-white"><i class="far fa-heart"></i></a></span>
+                                                        <span class="procuct_icon" tooltip="Compare" flow="right"><i class="fas fa-sync-alt" type="button" data-bs-toggle="modal" data-bs-target="#exampleModalXl"></i></span>
+                                                    </div>
+                                                    <div class="black_overlay"></div>
+                                                </div>
+                                                <div class="card-body">
+                                                    <h5 class="product_name text_black py-2"><a href="product_details.html  "><span class="product_number fw-bold">1.</span>Dummy Product Name</a></h5>
+                                                    <h6 class="product_price"><span class="text-muted"><s>&dollar;1200.00</s> &nbsp;</span>&dollar;800.00</h6>
+                                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi deleniti repellat minus?</p>
+                                                    <div class="star_wrapper mt-1 mb-2">
+                                                        <span class="full"><i class="fas fa-star"></i></span>
+                                                        <span class="full"><i class="fas fa-star"></i></span>
+                                                        <span class="full"><i class="fas fa-star"></i></span>
+                                                        <span class="full"><i class="fas fa-star"></i></span>
+                                                        <span class="blank"><i class="far fa-star"></i></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm-4 col-md-4">
+                                            <div class="card">
+                                                <div class="fi_sl_img_wrapper">
+                                                    <img class="card-img-top img-fluid" src="assets/image/fi_sl_1.jpg" alt="Card image cap">
+                                                    <div class="hover_show">
+                                                        <span class="procuct_icon" tooltip="Queck view" flow="right"><i class="fas fa-compress-alt" type="button" data-bs-toggle="modal" data-bs-target="#exampleModalLg"></i></span>
+                                                        <span class="procuct_icon" tooltip="White List" flow="right"><a href="wishlist.html" class="text-white"><i class="far fa-heart"></i></a></span>
+                                                        <span class="procuct_icon" tooltip="Compare" flow="right"><i class="fas fa-sync-alt" type="button" data-bs-toggle="modal" data-bs-target="#exampleModalXl"></i></span>
+                                                    </div>
+                                                    <div class="black_overlay"></div>
+                                                </div>
+                                                <div class="card-body">
+                                                    <h5 class="product_name text_black py-2"><a href="product_details.html  "><span class="product_number fw-bold">1.</span>Dummy Product Name</a></h5>
+                                                    <h6 class="product_price"><span class="text-muted"><s>&dollar;1200.00</s> &nbsp;</span>&dollar;800.00</h6>
+                                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi deleniti repellat minus?</p>
+                                                    <div class="star_wrapper mt-1 mb-2">
+                                                        <span class="full"><i class="fas fa-star"></i></span>
+                                                        <span class="full"><i class="fas fa-star"></i></span>
+                                                        <span class="full"><i class="fas fa-star"></i></span>
+                                                        <span class="full"><i class="fas fa-star"></i></span>
+                                                        <span class="blank"><i class="far fa-star"></i></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm-4 col-md-4">
+                                            <div class="card">
+                                                <div class="fi_sl_img_wrapper">
+                                                    <img class="card-img-top img-fluid" src="assets/image/fi_sl_1.jpg" alt="Card image cap">
+                                                    <div class="hover_show">
+                                                        <span class="procuct_icon" tooltip="Queck view" flow="right"><i class="fas fa-compress-alt" type="button" data-bs-toggle="modal" data-bs-target="#exampleModalLg"></i></span>
+                                                        <span class="procuct_icon" tooltip="White List" flow="right"><a href="wishlist.html" class="text-white"><i class="far fa-heart"></i></a></span>
+                                                        <span class="procuct_icon" tooltip="Compare" flow="right"><i class="fas fa-sync-alt" type="button" data-bs-toggle="modal" data-bs-target="#exampleModalXl"></i></span>
+                                                    </div>
+                                                    <div class="black_overlay"></div>
+                                                </div>
+                                                <div class="card-body">
+                                                    <h5 class="product_name text_black py-2"><a href="product_details.html  "><span class="product_number fw-bold">1.</span>Dummy Product Name</a></h5>
+                                                    <h6 class="product_price"><span class="text-muted"><s>&dollar;1200.00</s> &nbsp;</span>&dollar;800.00</h6>
+                                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi deleniti repellat minus?</p>
+                                                    <div class="star_wrapper mt-1 mb-2">
+                                                        <span class="full"><i class="fas fa-star"></i></span>
+                                                        <span class="full"><i class="fas fa-star"></i></span>
+                                                        <span class="full"><i class="fas fa-star"></i></span>
+                                                        <span class="full"><i class="fas fa-star"></i></span>
+                                                        <span class="blank"><i class="far fa-star"></i></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm-4 col-md-4">
+                                            <div class="card">
+                                                <div class="fi_sl_img_wrapper">
+                                                    <img class="card-img-top img-fluid" src="assets/image/fi_sl_1.jpg" alt="Card image cap">
+                                                    <div class="hover_show">
+                                                        <span class="procuct_icon" tooltip="Queck view" flow="right"><i class="fas fa-compress-alt" type="button" data-bs-toggle="modal" data-bs-target="#exampleModalLg"></i></span>
+                                                        <span class="procuct_icon" tooltip="White List" flow="right"><a href="wishlist.html" class="text-white"><i class="far fa-heart"></i></a></span>
+                                                        <span class="procuct_icon" tooltip="Compare" flow="right"><i class="fas fa-sync-alt" type="button" data-bs-toggle="modal" data-bs-target="#exampleModalXl"></i></span>
+                                                    </div>
+                                                    <div class="black_overlay"></div>
+                                                </div>
+                                                <div class="card-body">
+                                                    <h5 class="product_name text_black py-2"><a href="product_details.html  "><span class="product_number fw-bold">1.</span>Dummy Product Name</a></h5>
+                                                    <h6 class="product_price"><span class="text-muted"><s>&dollar;1200.00</s> &nbsp;</span>&dollar;800.00</h6>
+                                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi deleniti repellat minus?</p>
+                                                    <div class="star_wrapper mt-1 mb-2">
+                                                        <span class="full"><i class="fas fa-star"></i></span>
+                                                        <span class="full"><i class="fas fa-star"></i></span>
+                                                        <span class="full"><i class="fas fa-star"></i></span>
+                                                        <span class="full"><i class="fas fa-star"></i></span>
+                                                        <span class="blank"><i class="far fa-star"></i></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm-4 col-md-4">
+                                            <div class="card">
+                                                <div class="fi_sl_img_wrapper">
+                                                    <img class="card-img-top img-fluid" src="assets/image/fi_sl_1.jpg" alt="Card image cap">
+                                                    <div class="hover_show">
+                                                        <span class="procuct_icon" tooltip="Queck view" flow="right"><i class="fas fa-compress-alt" type="button" data-bs-toggle="modal" data-bs-target="#exampleModalLg"></i></span>
+                                                        <span class="procuct_icon" tooltip="White List" flow="right"><a href="wishlist.html" class="text-white"><i class="far fa-heart"></i></a></span>
+                                                        <span class="procuct_icon" tooltip="Compare" flow="right"><i class="fas fa-sync-alt" type="button" data-bs-toggle="modal" data-bs-target="#exampleModalXl"></i></span>
+                                                    </div>
+                                                    <div class="black_overlay"></div>
+                                                </div>
+                                                <div class="card-body">
+                                                    <h5 class="product_name text_black py-2"><a href="product_details.html  "><span class="product_number fw-bold">1.</span>Dummy Product Name</a></h5>
+                                                    <h6 class="product_price"><span class="text-muted"><s>&dollar;1200.00</s> &nbsp;</span>&dollar;800.00</h6>
+                                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi deleniti repellat minus?</p>
+                                                    <div class="star_wrapper mt-1 mb-2">
+                                                        <span class="full"><i class="fas fa-star"></i></span>
+                                                        <span class="full"><i class="fas fa-star"></i></span>
+                                                        <span class="full"><i class="fas fa-star"></i></span>
+                                                        <span class="full"><i class="fas fa-star"></i></span>
+                                                        <span class="blank"><i class="far fa-star"></i></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm-4 col-md-4">
+                                            <div class="card">
+                                                <div class="fi_sl_img_wrapper">
+                                                    <img class="card-img-top img-fluid" src="assets/image/fi_sl_1.jpg" alt="Card image cap">
+                                                    <div class="hover_show">
+                                                        <span class="procuct_icon" tooltip="Queck view" flow="right"><i class="fas fa-compress-alt" type="button" data-bs-toggle="modal" data-bs-target="#exampleModalLg"></i></span>
+                                                        <span class="procuct_icon" tooltip="White List" flow="right"><a href="wishlist.html" class="text-white"><i class="far fa-heart"></i></a></span>
+                                                        <span class="procuct_icon" tooltip="Compare" flow="right"><i class="fas fa-sync-alt" type="button" data-bs-toggle="modal" data-bs-target="#exampleModalXl"></i></span>
+                                                    </div>
+                                                    <div class="black_overlay"></div>
+                                                </div>
+                                                <div class="card-body">
+                                                    <h5 class="product_name text_black py-2"><a href="product_details.html  "><span class="product_number fw-bold">1.</span>Dummy Product Name</a></h5>
+                                                    <h6 class="product_price"><span class="text-muted"><s>&dollar;1200.00</s> &nbsp;</span>&dollar;800.00</h6>
+                                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi deleniti repellat minus?</p>
+                                                    <div class="star_wrapper mt-1 mb-2">
+                                                        <span class="full"><i class="fas fa-star"></i></span>
+                                                        <span class="full"><i class="fas fa-star"></i></span>
+                                                        <span class="full"><i class="fas fa-star"></i></span>
+                                                        <span class="full"><i class="fas fa-star"></i></span>
+                                                        <span class="blank"><i class="far fa-star"></i></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="more_btn text-center">
+                                                <button class="btn text_black">Show More</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- footer -->
+        <footer class="footer_secton">
+            <div class="container-fluid">
+                <div class="footer_row">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-12 mb-lg-0 mb-3">
+                            <div class="footer_sec_1 text-lg-start text-center">
+                                <img src="assets/image/logo.png" class="img-fluid " alt="">
+                                <div class="sec_1_text my-2">
+                                    <p>We are a team of designers and developers that create high quality wordpress, shopify, Opencart</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-sm-6">
+                            <div class="footer_contect">
+                                <h5 class="mb-2">Contact Us</h5>
+                                <ul class="list-unstyled">
+                                    <li class="list-inline-item">
+                                        <span><i class="pr-2 fas fa-home"></i> 4710-4890 Breckinridge USA</span>
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <a href="mailto:demo@yourdomain.com"><i class="pr-2 far fa-envelope"></i> demo@yourdomain.com </a>
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <a href="tel:(012) 800 456 789-987"><i class="pr-2 fas fa-phone-alt"></i> (012) 800 456 789-987</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-sm-6">
+                            <div class="footer_information">
+                                <h5 class="mb-2">Information</h5>
+                                <ul class="list-unstyled">
+                                    <li class="list-inline-item">
+                                        <a href="javascript:void(0);">Terms of Service</a>
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <a href="javascript:void(0);">Privacy Policy</a>
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <a href="javascript:void(0);">Shipping Policy</a>
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <a href="javascript:void(0);">Refund Policy</a>
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <a href="javascript:void(0);">FAQ's</a>
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <a href="javascript:void(0);">Size Chart</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-sm-6">
+                            <div class="footer_follow">
+                                <h5 class="mb-2">Follow Us</h5>
+                                <ul class="pl-0 list-unstyled">
+                                    <li class="footer icon">
+                                        <a href="javascript:void(0);">
+                                            <i class="fab fa-facebook-f"></i>
+                                        </a>
+                                    </li>
+                                    <li class="footer icon">
+                                        <a href="javascript:void(0);">
+                                            <i class="fab fa-twitter"></i>
+                                        </a>
+                                    </li>
+                                    <li class="footer icon">
+                                        <a href="javascript:void(0);">
+                                            <i class="fab fa-linkedin-in"></i>
+                                        </a>
+                                    </li>
+                                    <li class="footer icon">
+                                        <a href="javascript:void(0);">
+                                            <i class="fab fa-youtube"></i>
+                                        </a>
+                                    </li>
+                                    <li class="footer icon">
+                                        <a href="javascript:void(0);">
+                                            <i class="fab fa-vimeo-v"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <div class="store_icon">
+                                    <a href="javascript:void(0);">
+                                        <img src="assets/image/ios_store.png" class="img-fluid" alt="">
+                                    </a>
+                                    <a href="javascript:void(0);">
+                                        <img src="assets/image/play_store.png" class="img-fluid" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-6 order-lg-2">
+                            <div class="payment_method_img">
+                                <ul class="d-flex list-unstyled flex-wrap justify-content-center mb-0">
+                                    <li class="payment-icon">
+                                        <svg viewBox="0 0 38 24" xmlns="http://www.w3.org/2000/svg" role="img" width="38" height="24" aria-labelledby="pi-visa">
+                                            <title id="pi-visa">Visa</title>
+                                            <path opacity=".07" d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z"></path>
+                                            <path fill="#fff" d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32"></path>
+                                            <path d="M28.3 10.1H28c-.4 1-.7 1.5-1 3h1.9c-.3-1.5-.3-2.2-.6-3zm2.9 5.9h-1.7c-.1 0-.1 0-.2-.1l-.2-.9-.1-.2h-2.4c-.1 0-.2 0-.2.2l-.3.9c0 .1-.1.1-.1.1h-2.1l.2-.5L27 8.7c0-.5.3-.7.8-.7h1.5c.1 0 .2 0 .2.2l1.4 6.5c.1.4.2.7.2 1.1.1.1.1.1.1.2zm-13.4-.3l.4-1.8c.1 0 .2.1.2.1.7.3 1.4.5 2.1.4.2 0 .5-.1.7-.2.5-.2.5-.7.1-1.1-.2-.2-.5-.3-.8-.5-.4-.2-.8-.4-1.1-.7-1.2-1-.8-2.4-.1-3.1.6-.4.9-.8 1.7-.8 1.2 0 2.5 0 3.1.2h.1c-.1.6-.2 1.1-.4 1.7-.5-.2-1-.4-1.5-.4-.3 0-.6 0-.9.1-.2 0-.3.1-.4.2-.2.2-.2.5 0 .7l.5.4c.4.2.8.4 1.1.6.5.3 1 .8 1.1 1.4.2.9-.1 1.7-.9 2.3-.5.4-.7.6-1.4.6-1.4 0-2.5.1-3.4-.2-.1.2-.1.2-.2.1zm-3.5.3c.1-.7.1-.7.2-1 .5-2.2 1-4.5 1.4-6.7.1-.2.1-.3.3-.3H18c-.2 1.2-.4 2.1-.7 3.2-.3 1.5-.6 3-1 4.5 0 .2-.1.2-.3.2M5 8.2c0-.1.2-.2.3-.2h3.4c.5 0 .9.3 1 .8l.9 4.4c0 .1 0 .1.1.2 0-.1.1-.1.1-.1l2.1-5.1c-.1-.1 0-.2.1-.2h2.1c0 .1 0 .1-.1.2l-3.1 7.3c-.1.2-.1.3-.2.4-.1.1-.3 0-.5 0H9.7c-.1 0-.2 0-.2-.2L7.9 9.5c-.2-.2-.5-.5-.9-.6-.6-.3-1.7-.5-1.9-.5L5 8.2z" fill="#142688"></path>
+                                        </svg>
+                                    </li>
+                                    <li class="payment-icon">
+                                        <svg viewBox="0 0 38 24" xmlns="http://www.w3.org/2000/svg" role="img" width="38" height="24" aria-labelledby="pi-master">
+                                            <title id="pi-master">Mastercard</title>
+                                            <path opacity=".07" d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z"></path>
+                                            <path fill="#fff" d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32"></path>
+                                            <circle fill="#EB001B" cx="15" cy="12" r="7"></circle>
+                                            <circle fill="#F79E1B" cx="23" cy="12" r="7"></circle>
+                                            <path fill="#FF5F00" d="M22 12c0-2.4-1.2-4.5-3-5.7-1.8 1.3-3 3.4-3 5.7s1.2 4.5 3 5.7c1.8-1.2 3-3.3 3-5.7z"></path>
+                                        </svg>
+                                    </li>
+                                    <li class="payment-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 38 24" width="38" height="24" aria-labelledby="pi-american_express">
+                                            <title id="pi-american_express">American Express</title>
+                                            <g fill="none">
+                                                <path fill="#000" d="M35,0 L3,0 C1.3,0 0,1.3 0,3 L0,21 C0,22.7 1.4,24 3,24 L35,24 C36.7,24 38,22.7 38,21 L38,3 C38,1.3 36.6,0 35,0 Z" opacity=".07"></path>
+                                                <path fill="#006FCF" d="M35,1 C36.1,1 37,1.9 37,3 L37,21 C37,22.1 36.1,23 35,23 L3,23 C1.9,23 1,22.1 1,21 L1,3 C1,1.9 1.9,1 3,1 L35,1"></path>
+                                                <path fill="#FFF" d="M8.971,10.268 L9.745,12.144 L8.203,12.144 L8.971,10.268 Z M25.046,10.346 L22.069,10.346 L22.069,11.173 L24.998,11.173 L24.998,12.412 L22.075,12.412 L22.075,13.334 L25.052,13.334 L25.052,14.073 L27.129,11.828 L25.052,9.488 L25.046,10.346 L25.046,10.346 Z M10.983,8.006 L14.978,8.006 L15.865,9.941 L16.687,8 L27.057,8 L28.135,9.19 L29.25,8 L34.013,8 L30.494,11.852 L33.977,15.68 L29.143,15.68 L28.065,14.49 L26.94,15.68 L10.03,15.68 L9.536,14.49 L8.406,14.49 L7.911,15.68 L4,15.68 L7.286,8 L10.716,8 L10.983,8.006 Z M19.646,9.084 L17.407,9.084 L15.907,12.62 L14.282,9.084 L12.06,9.084 L12.06,13.894 L10,9.084 L8.007,9.084 L5.625,14.596 L7.18,14.596 L7.674,13.406 L10.27,13.406 L10.764,14.596 L13.484,14.596 L13.484,10.661 L15.235,14.602 L16.425,14.602 L18.165,10.673 L18.165,14.603 L19.623,14.603 L19.647,9.083 L19.646,9.084 Z M28.986,11.852 L31.517,9.084 L29.695,9.084 L28.094,10.81 L26.546,9.084 L20.652,9.084 L20.652,14.602 L26.462,14.602 L28.076,12.864 L29.624,14.602 L31.499,14.602 L28.987,11.852 L28.986,11.852 Z"></path>
+                                            </g>
+                                        </svg>
+                                    </li>
+                                    <li class="payment-icon">
+                                        <svg viewBox="0 0 38 24" xmlns="http://www.w3.org/2000/svg" width="38" height="24" role="img" aria-labelledby="pi-paypal">
+                                            <title id="pi-paypal">PayPal</title>
+                                            <path opacity=".07" d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z"></path>
+                                            <path fill="#fff" d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32"></path>
+                                            <path fill="#003087" d="M23.9 8.3c.2-1 0-1.7-.6-2.3-.6-.7-1.7-1-3.1-1h-4.1c-.3 0-.5.2-.6.5L14 15.6c0 .2.1.4.3.4H17l.4-3.4 1.8-2.2 4.7-2.1z"></path>
+                                            <path fill="#3086C8" d="M23.9 8.3l-.2.2c-.5 2.8-2.2 3.8-4.6 3.8H18c-.3 0-.5.2-.6.5l-.6 3.9-.2 1c0 .2.1.4.3.4H19c.3 0 .5-.2.5-.4v-.1l.4-2.4v-.1c0-.2.3-.4.5-.4h.3c2.1 0 3.7-.8 4.1-3.2.2-1 .1-1.8-.4-2.4-.1-.5-.3-.7-.5-.8z"></path>
+                                            <path fill="#012169" d="M23.3 8.1c-.1-.1-.2-.1-.3-.1-.1 0-.2 0-.3-.1-.3-.1-.7-.1-1.1-.1h-3c-.1 0-.2 0-.2.1-.2.1-.3.2-.3.4l-.7 4.4v.1c0-.3.3-.5.6-.5h1.3c2.5 0 4.1-1 4.6-3.8v-.2c-.1-.1-.3-.2-.5-.2h-.1z"></path>
+                                        </svg>
+                                    </li>
+                                    <li class="payment-icon">
+                                        <svg viewBox="0 0 38 24" xmlns="http://www.w3.org/2000/svg" role="img" width="38" height="24" aria-labelledby="pi-diners_club">
+                                            <title id="pi-diners_club">Diners Club</title>
+                                            <path opacity=".07" d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z"></path>
+                                            <path fill="#fff" d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32"></path>
+                                            <path d="M12 12v3.7c0 .3-.2.3-.5.2-1.9-.8-3-3.3-2.3-5.4.4-1.1 1.2-2 2.3-2.4.4-.2.5-.1.5.2V12zm2 0V8.3c0-.3 0-.3.3-.2 2.1.8 3.2 3.3 2.4 5.4-.4 1.1-1.2 2-2.3 2.4-.4.2-.4.1-.4-.2V12zm7.2-7H13c3.8 0 6.8 3.1 6.8 7s-3 7-6.8 7h8.2c3.8 0 6.8-3.1 6.8-7s-3-7-6.8-7z" fill="#3086C8"></path>
+                                        </svg>
+                                    </li>
+                                    <li class="payment-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 38 24" width="38" height="24" aria-labelledby="pi-discover">
+                                            <title id="pi-discover">Discover</title>
+                                            <path d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z" fill="#000" opacity=".07"></path>
+                                            <path d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32" fill="#FFF"></path>
+                                            <path d="M37 16.95V21c0 1.1-.9 2-2 2H23.228c7.896-1.815 12.043-4.601 13.772-6.05z" fill="#EDA024"></path>
+                                            <path fill="#494949" d="M9 11h20v2H9z"></path>
+                                            <path d="M22 12c0 1.7-1.3 3-3 3s-3-1.4-3-3 1.4-3 3-3c1.7 0 3 1.3 3 3z" fill="#EDA024"></path>
+                                        </svg>
+                                    </li>    
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 mt-lg-auto my-4 mb-lg-0 order-lg-1">
+                            <h6><a href="javascript:void(0);">Copyright © 2021 ANAMIKA</a> All Right Reserved.</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!--call to top -->
+        <div class="top_arrow">
+            <a href="javascript:void(0);" class="top"><i class="fas fa-chevron-up"></i></a>
+        </div>
+        
+        <!-- Queck view modal -->
+        <div class="modal fade" id="exampleModalLg" tabindex="-1" aria-labelledby="exampleModalLgLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <button type="button" class="btn-close ms-auto" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <div class="modal-body">
+                        <div class="queck_row">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="queck_img text-lg-start text-center">
+                                        <img src="assets/image/fi_sl_1.jpg" class="img-fluid" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="queck_disc">
+                                        <h5 class="product_name text_black pb-2"><span class="product_number fw-bold">1.</span>Dummy Product Name</h5>
+                                        <h6 class="product_price pb-2"><span class="text-muted"><s>&dollar;1200.00</s> &nbsp;</span>&dollar;800.00</h6>
+                                        <div class="rating_bar">
+                                            <span class="rate"><i class="fas fa-star"></i></span>
+                                            <span class="rate"><i class="fas fa-star"></i></span>
+                                            <span class="rate"><i class="fas fa-star"></i></span>
+                                            <span class="rate"><i class="fas fa-star"></i></span>
+                                            <span class="rate"><i class="fas fa-star"></i></span>
+                                            <span class="reviews">0 <span class="reviews_text">Reviews</span></span>
+                                        </div>
+                                        <p class="product_detail text-muted my-2">Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur.</p>
+                                        <div class="form-group">
+                                            <form action="">
+                                                <label for="size" class="d-block fw-bold mt-2">Size:</label>
+                                                <select name="product_size" id="size" class="bg-transparent text_black w-100 p-2 mt-2">
+                                                    <option value="XXL">XXL</option>
+                                                    <option value="XL">XL</option>
+                                                    <option value="M">M</option>
+                                                    <option value="S">S</option>
+                                                    <option value="L">L</option>
+                                                </select>
+                                                <label for="color" class="d-block fw-bold mt-2">Color:</label>
+                                                <select name="product_color" id="color" class="bg-transparent text_black w-100 p-2 my-2">
+                                                    <option value="Gold">Gold</option>
+                                                    <option value="Grey">Grey</option>
+                                                    <option value="Magenta">Magenta</option>
+                                                    <option value="Maroon">Maroon</option>
+                                                    <option value="Navy">Navy</option>
+                                                </select>
+                                            </form>
+                                        </div>                                        
+                                        <div class="product_quantity_wrapper d-flex flex-wrap">
+                                            <div class="quantity border-dark border-1 me-2">
+                                                <a href="javascript:void(0);" class="btn qtyBtn decrement_qty minus"><i class="fas fa-minus"></i></a>
+                                                <input type="text" class="qty" name="quantity" value="1" id="quantity">
+                                                <a href="javascript:void(0);" class="btn qtyBtn increment_qty plus"><i class="fas fa-plus"></i></a>
+                                            </div>
+                                            <button class="add_cart_btn border-0 mx-lg-auto">
+                                                <a href="product_details.html" class="text_black">Add To Cart</a>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Compare modal product Modal -->
+        <div class="modal fade" id="exampleModalXl" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3 class="text_black fw-bold mx-lg-auto">Compare Products</h3>
+                        <button type="button" class="btn-close mx-lg-0" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="compare_product_table overflow-auto">
+                            <table class="table table-hover mb-0 product_table">
+                                <thead>
+                                    <tr>
+                                        <th>Action</th>
+                                        <th class="text-center"><a href="javascript:void(0);" class="text_black">Remove</a></th>
+                                        <th class="text-center"><a href="javascript:void(0);" class="text_black">Remove</a></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th>Product name</th>
+                                        <td class="text-center"><h5 class="product_name text_black"><span class="product_number fw-bold">1.</span>Dummy Product Name</h5></td>
+                                        <td class="text-center"><h5 class="product_name text_black"><span class="product_number fw-bold">1.</span>Dummy Product Name</h5></td>
+                                    </tr>
+                                    <tr>
+                                        <th>Product image</th>
+                                        <td class="text-center">
+                                            <img src="assets/image/fi_sl_1.jpg" class="img-fluid" alt="">
+                                            <h6 class="product_price">&dollar;800.00</h6>
+                                            <a href="javascript:void(0);" class="text_black fw-bold"> VIEW PRODUCT</a>
+                                        </td>
+                                        <td class="text-center">
+                                            <img src="assets/image/fi_sl_1.jpg" class="img-fluid" alt="">
+                                            <h6 class="product_price">&dollar;800.00</h6>
+                                            <a href="javascript:void(0);" class="text_black fw-bold"> VIEW PRODUCT</a>
+                                        </td>
+                                    </tr>
+                                    <tr class="product_description">
+                                        <th>Product description</th>
+                                        <td><p class="text_black">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis in officia magni deserunt recusandae. Sapiente explicabo ad dignissimos necessitatibus velit impedit, fugit quas temporibus rerum.</p></td>
+                                        <td><p class="text_black">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis in officia magni deserunt recusandae. Sapiente explicabo ad dignissimos necessitatibus velit impedit, fugit quas temporibus rerum.</p></td>
+                                    </tr>
+                                    <tr>
+                                        <th>Availability</th>
+                                        <td class="text-center">Available In stock</td>
+                                        <td class="text-center">Available In stock</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="assets/js/jquery-3.3.1.js"></script>
+    <script src="assets/js/bootstrap.bundle.js"></script>
+    <script src="assets/js/jquery.toolbar.min.js"></script> 
+    <script src="assets/js/jarallax.min.js"></script>
+    <script src="assets/js/slick.min.js "></script>
+    <script src="assets/js/range-slider.js"></script>    
+    <script src="assets/js/custom.js"></script>
+    <script>
+        $("#wishlist_table").on('click', '.remove_row a', function () {
+            $(this).closest('tr').remove();
+        });
+    </script>
+</body>
+
+</html>
